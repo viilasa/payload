@@ -43,7 +43,7 @@ export default buildConfig({
     // storage-adapter-placeholder
   ],
 
-  // ✅ Add this CORS config
+  // ✅ This is the correct CORS format
   cors: ['http://localhost:3000'],
-  },
 })
+
