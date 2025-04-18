@@ -44,8 +44,6 @@ export default buildConfig({
   ],
 
   // ✅ Add this CORS config
-  cors: {
-    origin: ['http://localhost:3000'], // Your frontend URL
-    credentials: true, // Enable if you're using cookies/auth
+  cors: ['http://localhost:3000'],
   },
 })
