@@ -1,6 +1,9 @@
+// collections/Blogs.ts
+
 import type { CollectionConfig } from 'payload'
 import { authenticated } from '../access/authenticated'
 import { slugField } from '@/fields/slug'
+import { defaultLexical } from '@/fields/defaultLexical'
 
 export const Blogs: CollectionConfig = {
   slug: 'blogs',
@@ -12,7 +15,7 @@ export const Blogs: CollectionConfig = {
   },
   admin: {
     useAsTitle: 'title',
-    defaultColumns: ['title', 'slug', 'status', 'publishedAt'],
+    defaultColumns: ['title', 'slug', 'status', 'publishedAt', 'content'],
   },
   fields: [
     {
@@ -24,6 +27,7 @@ export const Blogs: CollectionConfig = {
       name: 'content',
       type: 'richText',
       required: true,
+      editor: defaultLexical,
     },
     {
       name: 'excerpt',
@@ -82,4 +86,4 @@ export const Blogs: CollectionConfig = {
   versions: {
     drafts: true,
   },
-} 
+}
