@@ -26,8 +26,12 @@ export const Blogs: CollectionConfig = {
     {
       name: 'content',
       type: 'richText',
-      required: true,
       editor: defaultLexical,
+    },
+    {
+      name: 'excerpt',
+      type: 'textarea',
+      required: true,
     },
     
     {
