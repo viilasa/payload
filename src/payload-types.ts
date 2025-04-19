@@ -210,7 +210,21 @@ export interface Service {
 export interface Blog {
   id: number;
   title: string;
-  content: any;
+  content: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
   excerpt: string;
   featuredImage: number | Media;
   author: number | User;

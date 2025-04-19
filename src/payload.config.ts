@@ -15,7 +15,6 @@ import { Blogs } from './collections/blogs'
 import { Categories } from './collections/Categories'
 import { Tags } from './collections/tags'
 import { Testimonials } from './collections/Testimonials'
-
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
@@ -42,8 +41,4 @@ export default buildConfig({
     payloadCloudPlugin(),
     // storage-adapter-placeholder
   ],
-
-  // ✅ This is the correct CORS format
-  cors: ['http://localhost:3000'],
 })
-
