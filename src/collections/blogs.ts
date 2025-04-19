@@ -29,11 +29,7 @@ export const Blogs: CollectionConfig = {
       required: true,
       editor: defaultLexical,
     },
-    {
-      name: 'excerpt',
-      type: 'textarea',
-      required: true,
-    },
+    
     {
       name: 'featuredImage',
       type: 'upload',
